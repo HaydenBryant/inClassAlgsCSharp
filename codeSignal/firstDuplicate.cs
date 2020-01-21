@@ -1,4 +1,4 @@
-int firstDuplicate(int[] a) {
+/*int firstDuplicate(int[] a) {
     
     var valuesArray = new int[a.Length];
     
@@ -10,6 +10,26 @@ int firstDuplicate(int[] a) {
         }
         
         valuesArray[i] = a[i];
+    }
+    
+    return -1;
+}*/
+
+
+int firstDuplicate(int[] a) {
+    
+    var valuesArray = new int[a.Length];
+    
+    for(var i = 0; i < a.Length; i++)
+    {        
+        if(valuesArray[(a[i] - 1)] == 1)
+        {
+            return a[i];
+        }
+        else
+        {
+            valuesArray[(a[i] - 1)] = 1;
+        }
     }
     
     return -1;
