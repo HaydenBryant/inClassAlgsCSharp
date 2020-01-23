@@ -26,11 +26,7 @@ int firstDuplicate(int[] a) {
         {
             return a[i];
         }
-        else
-        {
-            valuesArray[(a[i] - 1)] = 1;
-        }
+        valuesArray[(a[i] - 1)] = 1;
     }
-    
     return -1;
 }
